@@ -35,6 +35,8 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_ZA.UTF-8'
 fi
 
+export DOTNET_ROOT="$HOME/.dotnet"
+
 #
 # Paths
 #
@@ -53,8 +55,10 @@ path=(
   $HOME/.local/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  $HOME/.dotnet
   $HOME/.dotnet/tools/
   $HOME/.cargo/bin
+  $HOME/code/flutter/flutter/bin/
   $path
 )
 
