@@ -53,6 +53,8 @@ typeset -gU cdpath fpath mailpath path
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/bin
+  $HOME/code/flutter/bin
+  $HOME/.pub-cache/bin
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $HOME/.dotnet
