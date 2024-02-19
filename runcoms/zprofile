@@ -36,6 +36,11 @@ if [[ -z "$LANG" ]]; then
 fi
 
 export DOTNET_ROOT="$HOME/.dotnet"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export ANDROID_USER_HOME="$HOME/.android"
+export ANDROID_EMULATOR_HOME="$ANDROID_USER_HOME"
+export ANDROID_AVD_HOME="$HOME/.config/.android/avd/"
 
 #
 # Paths
@@ -53,14 +58,15 @@ typeset -gU cdpath fpath mailpath path
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/bin
-  $HOME/code/flutter/bin
+  $HOME/fvm/default/bin
   $HOME/.pub-cache/bin
-  /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  $HOME/go/bin
   $HOME/.dotnet
-  $HOME/.dotnet/tools/
+  $HOME/.dotnet/tools
   $HOME/.cargo/bin
-  $HOME/code/flutter/flutter/bin/
+  $HOME/code/zig
+  $HOME/Android/Sdk/cmdline-tools/latest/bin
   $path
 )
 

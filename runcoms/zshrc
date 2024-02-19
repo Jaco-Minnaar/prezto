@@ -20,7 +20,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
 
 
 # pnpm
@@ -30,3 +30,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# opam configuration
+[[ ! -r /home/jaco/.opam/opam-init/init.zsh ]] || source /home/jaco/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+source $HOME/code/scripts/_timetrace
+source $HOME/code/scripts/wezterm.sh
+
+eval "$(zoxide init --cmd cd zsh)"
