@@ -38,3 +38,11 @@ source $HOME/code/scripts/_timetrace
 source $HOME/code/scripts/wezterm.sh
 
 eval "$(zoxide init --cmd cd zsh)"
+
+# bun completions
+[ -s "/home/jaco/.bun/_bun" ] && source "/home/jaco/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="$PATH:/home/jaco/.turso"
